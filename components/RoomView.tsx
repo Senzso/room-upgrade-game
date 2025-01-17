@@ -30,12 +30,12 @@ export function RoomView() {
     if (roomRef.current) {
       const roomRect = roomRef.current.getBoundingClientRect()
       const x = Math.max(0, Math.min(
-        e.clientX - roomRect.left - 50,
-        roomRect.width - 100
+        e.clientX - roomRect.left - 40,
+        roomRect.width - 80
       ))
       const y = Math.max(0, Math.min(
-        e.clientY - roomRect.top - 50,
-        roomRect.height - 100
+        e.clientY - roomRect.top - 40,
+        roomRect.height - 80
       ))
 
       updateItem(itemData.id, {
@@ -114,8 +114,8 @@ export function RoomView() {
             <Image 
               src={item.image || "/placeholder.svg"}
               alt={item.type}
-              width={100}
-              height={100}
+              width={80}
+              height={80}
               className="pointer-events-none"
             />
           </div>

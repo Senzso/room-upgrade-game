@@ -64,8 +64,8 @@ export function ItemGrid() {
             <Image
               src={item.image.left || "/placeholder.svg"}
               alt={item.type}
-              width={80}
-              height={80}
+              width={64}  // Reduced by 20%
+              height={64} // Reduced by 20%
               className="mx-auto"
             />
             <p className={`${textFont.className} text-center mt-2 text-yellow-400`}>
