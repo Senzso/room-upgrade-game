@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --game-primary: #FFD700;
+  --game-background: #1E1E1E;
+  --game-secondary: #4B0082;
+  --game-accent: #32CD32;
+  --game-warning: #FF4500;
+}
+
+body {
+  @apply bg-[var(--game-background)] text-white;
+}
+
+.game-gradient {
+  @apply bg-gradient-to-br from-[var(--game-secondary)] to-blue-900;
+}
+
+.game-card {
+  @apply bg-[#1a1625]/90 border-none;
+}
+
+.game-button {
+  @apply font-medium py-6 text-lg transition-all duration-200;
+}
+
+.game-input {
+  @apply bg-[#2a2435] border-gray-700 text-white;
+}
+
+.game-title {
+  @apply font-press-start text-[var(--game-primary)];
+}
+
+.game-text {
+  @apply font-pixelify;
+}
+
