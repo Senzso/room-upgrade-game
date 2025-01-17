@@ -34,6 +34,7 @@ interface GameState {
   isGameOver: boolean
   leaderboard: LeaderboardEntry[]
   lastLeaderboardUpdate: number
+  isFirstTrade: boolean
 
   setWallet: (address: string) => void
   setUsername: (username: string) => void
@@ -45,6 +46,7 @@ interface GameState {
   setGameOver: (isOver: boolean) => void
   reset: () => void
   updateLeaderboard: () => void
+  setFirstTradeDone: () => void
 }
 
 export const useGameStore = create<GameState>()(
@@ -52,8 +54,8 @@ export const useGameStore = create<GameState>()(
     (set, get) => ({
       address: null,
       username: null,
-      balance: 5, // Changed from 10
-      netWorth: 5, // Changed from 10
+      balance: 10,
+      netWorth: 10,
       items: [
         {
           id: 'desk-default',
@@ -69,6 +71,7 @@ export const useGameStore = create<GameState>()(
       isGameOver: false,
       leaderboard: generateRandomLeaderboard(),
       lastLeaderboardUpdate: Date.now(),
+      isFirstTrade: true,
 
       setWallet: (address) => set({ address }),
       
@@ -85,19 +88,10 @@ export const useGameStore = create<GameState>()(
           }
         }
 
-        // Introduce a small chance of random events
-        const randomEvent = Math.random()
-        let eventAmount = 0
-        if (randomEvent < 0.05) {
-          eventAmount = -state.balance * 0.1 // 5% chance to lose 10% of balance
-        } else if (randomEvent < 0.1) {
-          eventAmount = state.balance * 0.05 // 5% chance to gain 5% of balance
-        }
-
         return {
           ...state,
-          balance: Math.max(0, newBalance + eventAmount),
-          netWorth: state.netWorth + amount + eventAmount
+          balance: newBalance,
+          netWorth: state.netWorth + amount
         }
       }),
 
@@ -133,8 +127,8 @@ export const useGameStore = create<GameState>()(
       reset: () => set({
         address: null,
         username: null,
-        balance: 5, // Changed from 10
-        netWorth: 5, // Changed from 10
+        balance: 10,
+        netWorth: 10,
         items: [
           {
             id: 'desk-default',
@@ -149,7 +143,8 @@ export const useGameStore = create<GameState>()(
         tradeHistory: [],
         isGameOver: false,
         leaderboard: generateRandomLeaderboard(),
-        lastLeaderboardUpdate: Date.now()
+        lastLeaderboardUpdate: Date.now(),
+        isFirstTrade: true
       }),
 
       updateLeaderboard: () => set((state) => {
@@ -176,7 +171,8 @@ export const useGameStore = create<GameState>()(
           leaderboard: updatedLeaderboard.slice(0, 10),
           lastLeaderboardUpdate: now
         }
-      })
+      }),
+      setFirstTradeDone: () => set({ isFirstTrade: false })
     }),
     {
       name: 'solife-storage'

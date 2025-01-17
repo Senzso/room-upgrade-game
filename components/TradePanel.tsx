@@ -10,23 +10,33 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const TRADE_CONFIGS = {
-  safe: { color: 'bg-green-400 hover:bg-green-500 text-black', risk: 0.45, baseAmount: 0.8, winMultiplier: 1.1 },
-  moderate: { color: 'bg-yellow-400 hover:bg-yellow-500 text-black', risk: 0.55, baseAmount: 1.5, winMultiplier: 1.3 },
-  risky: { color: 'bg-orange-400 hover:bg-orange-500 text-black', risk: 0.65, baseAmount: 3, winMultiplier: 1.7 },
-  yolo: { color: 'bg-red-400 hover:bg-red-500 text-black', risk: 0.75, baseAmount: 6, winMultiplier: 2.5 }
+  safe: { color: 'bg-green-400 hover:bg-green-500 text-black', risk: 0.35, baseAmount: 1, winMultiplier: 1.2 },
+  moderate: { color: 'bg-yellow-400 hover:bg-yellow-500 text-black', risk: 0.45, baseAmount: 2, winMultiplier: 1.5 },
+  risky: { color: 'bg-orange-400 hover:bg-orange-500 text-black', risk: 0.55, baseAmount: 4, winMultiplier: 2 },
+  yolo: { color: 'bg-red-400 hover:bg-red-500 text-black', risk: 0.65, baseAmount: 8, winMultiplier: 3 }
 }
 
 export function TradePanel() {
-  const { balance, updateBalance, addTradeHistory, leaderboard, updateLeaderboard } = useGameStore()
+  const { balance, updateBalance, addTradeHistory, leaderboard, updateLeaderboard, isFirstTrade, setFirstTradeDone } = useGameStore()
   const [isLeaderboardOpen, setIsLeaderboardOpen] = useState(false)
 
   const handleTrade = (type: TradeType) => {
     const config = TRADE_CONFIGS[type]
-    const randomFactor = Math.random()
-    const isLoss = randomFactor < config.risk
-    const amount = isLoss 
-      ? -config.baseAmount * (0.8 + (randomFactor * 0.4)) 
-      : config.baseAmount * config.winMultiplier * (0.8 + (randomFactor * 0.4))
+    let isWin: boolean
+    let amount: number
+
+    if (isFirstTrade) {
+      isWin = true
+      setFirstTradeDone()
+    } else {
+      isWin = Math.random() > 0.4 // 60% chance of winning
+    }
+
+    if (isWin) {
+      amount = config.baseAmount * config.winMultiplier * (0.8 + Math.random() * 0.4) // 80% to 120% of base win
+    } else {
+      amount = -config.baseAmount * (0.8 + Math.random() * 0.4) // 80% to 120% of base loss
+    }
 
     updateBalance(amount)
     addTradeHistory({
