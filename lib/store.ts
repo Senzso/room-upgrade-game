@@ -54,15 +54,15 @@ export const useGameStore = create<GameState>()(
     (set, get) => ({
       address: null,
       username: null,
-      balance: 10,
-      netWorth: 10,
+      balance: 150,
+      netWorth: 150,
       items: [
         {
           id: 'desk-default',
           type: 'desk',
-          image: 'https://i.postimg.cc/KjJX0BSm/Desk-1-left.png',
+          image: '/Desk 1 left.png',
           level: 1,
-          position: { x: 450, y: 200 }, // Updated position: more right (450) and lower (200)
+          position: { x: 450, y: 200 },
           side: 'left',
           cost: 0
         }
@@ -127,15 +127,15 @@ export const useGameStore = create<GameState>()(
       reset: () => set({
         address: null,
         username: null,
-        balance: 10,
-        netWorth: 10,
+        balance: 150,
+        netWorth: 150,
         items: [
           {
             id: 'desk-default',
             type: 'desk',
-            image: 'https://i.postimg.cc/KjJX0BSm/Desk-1-left.png',
+            image: '/Desk 1 left.png',
             level: 1,
-            position: { x: 450, y: 200 }, // Updated position: more right (450) and lower (200)
+            position: { x: 450, y: 200 },
             side: 'left',
             cost: 0
           }

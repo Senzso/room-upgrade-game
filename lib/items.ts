@@ -12,126 +12,142 @@ interface AvailableItem {
 export const availableItems: AvailableItem[] = [
   {
     type: 'bed',
-    cost: 5,
+    cost: 75,
     image: {
-      left: 'https://i.postimg.cc/P5FXXG7d/bed-1-left.png',
-      right: 'https://i.postimg.cc/fyZZ2MVf/bed-1-right.png'
+      left: '/bed 1 left.png',
+      right: '/bed 1 right.png'
     }
   },
   {
     type: 'chair',
-    cost: 3,
+    cost: 45,
     image: {
-      left: 'https://i.postimg.cc/FzZvwwc5/Chair-1-left.png',
-      right: 'https://i.postimg.cc/1RcygVdC/Chair-1-right.png'
+      left: '/Chair 1 left.png',
+      right: '/Chair 1 right.png'
     }
   },
   {
     type: 'lamp',
-    cost: 2,
+    cost: 30,
     image: {
-      left: 'https://i.postimg.cc/y6Pz64J2/Lamp.png',
-      right: 'https://i.postimg.cc/y6Pz64J2/Lamp.png'
+      left: '/Lamp.png',
+      right: '/Lamp.png'
     }
   },
   {
     type: 'mirror',
-    cost: 4,
+    cost: 60,
     image: {
-      left: 'https://i.postimg.cc/MK32R7mD/Mirror-1-left.png',
-      right: 'https://i.postimg.cc/R0fjjj5s/Mirror-1-right.png'
+      left: '/Mirror 1 left.png',
+      right: '/Mirror 1 right.png'
     }
   },
   {
     type: 'shelving',
-    cost: 6,
+    cost: 90,
     image: {
-      left: 'https://i.postimg.cc/1XR2VXg2/shelving-1-left.png',
-      right: 'https://i.postimg.cc/90xSd2ZM/shelving-1-right.png'
+      left: '/shelving 1 left.png',
+      right: '/shelving 1 right.png'
     }
   },
   {
     type: 'tv',
-    cost: 8,
+    cost: 120,
     image: {
-      left: 'https://i.postimg.cc/GmTNyZ2L/tv-left-1.png',
-      right: 'https://i.postimg.cc/26rXgyxy/tv-right-1.png'
+      left: '/tv left 1.png',
+      right: '/tv right 1.png'
     }
   },
   {
     type: 'closet',
-    cost: 7,
+    cost: 105,
     image: {
-      left: 'https://i.postimg.cc/VkTwyqS6/Closet-1-left.png',
-      right: 'https://i.postimg.cc/8zsGnKz9/Closet-1-right.png'
+      left: '/Closet 1 left.png',
+      right: '/Closet 1 right.png'
     }
   },
   {
     type: 'couch',
-    cost: 10,
+    cost: 150,
     image: {
-      left: 'https://i.postimg.cc/761rTjKG/couch-1-left.png',
-      right: 'https://i.postimg.cc/GtcwPzfM/couch-1-right.png'
+      left: '/couch 1 left.png',
+      right: '/couch 1 right.png'
     }
   },
   {
     type: 'books',
-    cost: 1,
+    cost: 15,
     image: {
-      left: 'https://i.postimg.cc/KYMZmVqj/Books-1-left.png',
-      right: 'https://i.postimg.cc/vB7bVndd/Books-1-only-right.png'
+      left: '/Books 1 left.png',
+      right: '/Books 1 only right.png'
+    }
+  },
+  {
+    type: 'tv-stand',
+    cost: 75,
+    image: {
+      left: '/tv-stand 1 left.png',
+      right: '/tv-stand 1 right.png'
+    }
+  },
+  {
+    type: 'wall-shelving',
+    cost: 60,
+    image: {
+      left: '/wall-shelving 1 left.png',
+      right: '/wall-shelving 1 right.png'
     }
   }
 ]
 
 export const itemUpgrades: Record<ItemType, { left: string[], right: string[] }> = {
   bed: {
-    left: ['https://i.postimg.cc/P5FXXG7d/bed-1-left.png', 'https://i.postimg.cc/mrzbhXxC/bed-2-left.png'],
-    right: ['https://i.postimg.cc/fyZZ2MVf/bed-1-right.png', 'https://i.postimg.cc/HLqTMwHK/bed-2-right.png']
+    left: ['/bed 1 left.png', '/bed 2 left.png'],
+    right: ['/bed 1 right.png', '/bed 2 right.png']
   },
   chair: {
-    left: ['https://i.postimg.cc/FzZvwwc5/Chair-1-left.png', 'https://i.postimg.cc/MK6q1K2W/chair-2-left.png'],
-    right: ['https://i.postimg.cc/1RcygVdC/Chair-1-right.png', 'https://i.postimg.cc/3Jt715Y2/chair-2-right.png']
+    left: ['/Chair 1 left.png', '/chair 2 left.png'],
+    right: ['/Chair 1 right.png', '/chair 2 right.png']
   },
   desk: {
-    left: ['https://i.postimg.cc/KjJX0BSm/Desk-1-left.png'],
-    right: ['https://i.postimg.cc/QxdZH41C/Desk-1-right.png']
+    left: ['/Desk 1 left.png'],
+    right: ['/Desk 1 right.png']
   },
   lamp: {
-    left: ['https://i.postimg.cc/y6Pz64J2/Lamp.png'],
-    right: ['https://i.postimg.cc/y6Pz64J2/Lamp.png']
+    left: ['/Lamp.png'],
+    right: ['/Lamp.png']
   },
   mirror: {
-    left: ['https://i.postimg.cc/MK32R7mD/Mirror-1-left.png', 'https://i.postimg.cc/sgBFJMnR/mirror-2-left.png'],
-    right: ['https://i.postimg.cc/R0fjjj5s/Mirror-1-right.png', 'https://i.postimg.cc/6pFkbBS4/mirror-2-right.png']
+    left: ['/Mirror 1 left.png', '/mirror 2 left.png'],
+    right: ['/Mirror 1 right.png', '/mirror 2 right.png']
   },
   shelving: {
-    left: ['https://i.postimg.cc/1XR2VXg2/shelving-1-left.png', 'https://i.postimg.cc/C1s9KkKb/shelving-2-left.png', 'https://i.postimg.cc/RVF2M3xn/shelving-3-left.png'],
-    right: ['https://i.postimg.cc/90xSd2ZM/shelving-1-right.png', 'https://i.postimg.cc/wxFS8XZp/shelving-2-right.png', 'https://i.postimg.cc/DyMHm27p/shelving-3-right.png']
+    left: ['/shelving 1 left.png', '/shelving 2 left.png', '/shelving 3 left.png'],
+    right: ['/shelving 1 right.png', '/shelving 2 right.png', '/shelving 3 right.png']
   },
   tv: {
-    left: ['https://i.postimg.cc/GmTNyZ2L/tv-left-1.png'],
-    right: ['https://i.postimg.cc/26rXgyxy/tv-right-1.png']
+    left: ['/tv left 1.png'],
+    right: ['/tv right 1.png']
   },
   closet: {
-    left: ['https://i.postimg.cc/VkTwyqS6/Closet-1-left.png', 'https://i.postimg.cc/3wvT3kpZ/closet-2-left.png'],
-    right: ['https://i.postimg.cc/8zsGnKz9/Closet-1-right.png', 'https://i.postimg.cc/KzhyjmDh/closet-2-right.png']
+    left: ['/Closet 1 left.png', '/closet 2 left.png'],
+    right: ['/Closet 1 right.png', '/closet 2 right.png']
   },
   couch: {
-    left: ['https://i.postimg.cc/761rTjKG/couch-1-left.png'],
-    right: ['https://i.postimg.cc/GtcwPzfM/couch-1-right.png']
+    left: ['/couch 1 left.png'],
+    right: ['/couch 1 right.png']
   },
   books: {
-    left: ['https://i.postimg.cc/KYMZmVqj/Books-1-left.png'],
-    right: ['https://i.postimg.cc/vB7bVndd/Books-1-only-right.png']
+    left: ['/Books 1 left.png'],
+    right: ['/Books 1 only right.png']
   },
   'tv-stand': {
-    left: ['https://i.postimg.cc/s2FL9wQp/tv-stand-1-left.png'],
-    right: ['https://i.postimg.cc/YS1sXYYT/tv-stand-1-right.png']
+    left: ['/tv-stand 1 left.png'],
+    right: ['/tv-stand 1 right.png']
   },
   'wall-shelving': {
-    left: ['https://i.postimg.cc/gjBSw-DbL/wall-shelving-1-left.png'],
-    right: ['https://i.postimg.cc/ryhYY8Ry/wall-shelving-1-right.png']
+    left: ['/wall-shelving 1 left.png'],
+    right: ['/wall-shelving 1 right.png']
   }
 }
 

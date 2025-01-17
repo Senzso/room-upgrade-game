@@ -47,14 +47,14 @@ export function RoomView() {
 
   const handleUpgrade = (itemId: string) => {
     const item = items.find(i => i.id === itemId)
-    if (item && balance >= 5 && item.type !== 'desk') {
+    if (item && balance >= 75 && item.type !== 'desk') {
       const upgrades = itemUpgrades[item.type][item.side]
       if (item.level < upgrades.length) {
         updateItem(itemId, { 
           level: item.level + 1,
           image: upgrades[item.level]
         })
-        updateBalance(-5)
+        updateBalance(-75)
       }
     }
   }
@@ -88,7 +88,7 @@ export function RoomView() {
         onDrop={handleDrop}
       >
         <Image 
-          src="https://i.postimg.cc/ZRS1ZVJT/Room-estructure.png"
+          src="/Room estructure.png"
           alt="Room"
           layout="fill"
           objectFit="contain"
@@ -141,13 +141,13 @@ export function RoomView() {
             onClick={() => selectedItemId && handleUpgrade(selectedItemId)}
             variant="outline"
             className={`px-4 ${
-              canUpgrade && balance >= 5
+              canUpgrade && balance >= 75
                 ? 'bg-green-500 text-white hover:bg-green-600'
                 : 'bg-gray-600 text-gray-400 cursor-not-allowed'
             }`}
-            disabled={!canUpgrade || balance < 5}
+            disabled={!canUpgrade || balance < 75}
           >
-            Upgrade (5 SOL)
+            Upgrade (75 SOL)
           </Button>
         )}
         <Button

@@ -10,10 +10,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const TRADE_CONFIGS = {
-  safe: { color: 'bg-green-400 hover:bg-green-500 text-black', risk: 0.35, baseAmount: 1, winMultiplier: 1.2 },
-  moderate: { color: 'bg-yellow-400 hover:bg-yellow-500 text-black', risk: 0.45, baseAmount: 2, winMultiplier: 1.5 },
-  risky: { color: 'bg-orange-400 hover:bg-orange-500 text-black', risk: 0.55, baseAmount: 4, winMultiplier: 2 },
-  yolo: { color: 'bg-red-400 hover:bg-red-500 text-black', risk: 0.65, baseAmount: 8, winMultiplier: 3 }
+  safe: { color: 'bg-green-400 hover:bg-green-500 text-black', risk: 0.35, baseAmount: 15, winMultiplier: 1.2 },
+  moderate: { color: 'bg-yellow-400 hover:bg-yellow-500 text-black', risk: 0.45, baseAmount: 30, winMultiplier: 1.5 },
+  risky: { color: 'bg-orange-400 hover:bg-orange-500 text-black', risk: 0.55, baseAmount: 60, winMultiplier: 2 },
+  yolo: { color: 'bg-red-400 hover:bg-red-500 text-black', risk: 0.65, baseAmount: 120, winMultiplier: 3 }
 }
 
 export function TradePanel() {
