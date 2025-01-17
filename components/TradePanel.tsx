@@ -10,10 +10,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const TRADE_CONFIGS = {
-  safe: { color: 'bg-green-400 hover:bg-green-500 text-black', risk: 0.3, baseAmount: 1, winMultiplier: 1.2 },
-  moderate: { color: 'bg-yellow-400 hover:bg-yellow-500 text-black', risk: 0.4, baseAmount: 2, winMultiplier: 1.5 },
-  risky: { color: 'bg-orange-400 hover:bg-orange-500 text-black', risk: 0.5, baseAmount: 4, winMultiplier: 2 },
-  yolo: { color: 'bg-red-400 hover:bg-red-500 text-black', risk: 0.6, baseAmount: 8, winMultiplier: 3 }
+  safe: { color: 'bg-green-400 hover:bg-green-500 text-black', risk: 0.45, baseAmount: 0.8, winMultiplier: 1.1 },
+  moderate: { color: 'bg-yellow-400 hover:bg-yellow-500 text-black', risk: 0.55, baseAmount: 1.5, winMultiplier: 1.3 },
+  risky: { color: 'bg-orange-400 hover:bg-orange-500 text-black', risk: 0.65, baseAmount: 3, winMultiplier: 1.7 },
+  yolo: { color: 'bg-red-400 hover:bg-red-500 text-black', risk: 0.75, baseAmount: 6, winMultiplier: 2.5 }
 }
 
 export function TradePanel() {
@@ -25,8 +25,8 @@ export function TradePanel() {
     const randomFactor = Math.random()
     const isLoss = randomFactor < config.risk
     const amount = isLoss 
-      ? -config.baseAmount * (1 + (randomFactor * 0.5)) 
-      : config.baseAmount * config.winMultiplier * (1 + (randomFactor * 0.5))
+      ? -config.baseAmount * (0.8 + (randomFactor * 0.4)) 
+      : config.baseAmount * config.winMultiplier * (0.8 + (randomFactor * 0.4))
 
     updateBalance(amount)
     addTradeHistory({

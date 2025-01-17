@@ -52,8 +52,8 @@ export const useGameStore = create<GameState>()(
     (set, get) => ({
       address: null,
       username: null,
-      balance: 10,
-      netWorth: 10,
+      balance: 5, // Changed from 10
+      netWorth: 5, // Changed from 10
       items: [
         {
           id: 'desk-default',
@@ -85,10 +85,19 @@ export const useGameStore = create<GameState>()(
           }
         }
 
+        // Introduce a small chance of random events
+        const randomEvent = Math.random()
+        let eventAmount = 0
+        if (randomEvent < 0.05) {
+          eventAmount = -state.balance * 0.1 // 5% chance to lose 10% of balance
+        } else if (randomEvent < 0.1) {
+          eventAmount = state.balance * 0.05 // 5% chance to gain 5% of balance
+        }
+
         return {
           ...state,
-          balance: newBalance,
-          netWorth: state.netWorth + amount
+          balance: Math.max(0, newBalance + eventAmount),
+          netWorth: state.netWorth + amount + eventAmount
         }
       }),
 
@@ -124,8 +133,8 @@ export const useGameStore = create<GameState>()(
       reset: () => set({
         address: null,
         username: null,
-        balance: 10,
-        netWorth: 10,
+        balance: 5, // Changed from 10
+        netWorth: 5, // Changed from 10
         items: [
           {
             id: 'desk-default',
