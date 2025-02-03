@@ -7,18 +7,27 @@ import { textFont } from '@/lib/fonts'
 import { useState } from 'react'
 
 const availableItems = [
-  { type: 'bed', cost: 75, image: { left: 'https://i.postimg.cc/P5FXXG7d/bed-1-left.png', right: 'https://i.postimg.cc/fyZZ2MVf/bed-1-right.png' } },
-  { type: 'chair', cost: 45, image: { left: 'https://i.postimg.cc/FzZvwwc5/Chair-1-left.png', right: 'https://i.postimg.cc/1RcygVdC/Chair-1-right.png' } },
-  { type: 'lamp', cost: 30, image: { left: 'https://i.postimg.cc/y6Pz64J2/Lamp.png', right: 'https://i.postimg.cc/y6Pz64J2/Lamp.png' } },
-  { type: 'mirror', cost: 60, image: { left: 'https://i.postimg.cc/MK32R7mD/Mirror-1-left.png', right: 'https://i.postimg.cc/R0fjjj5s/Mirror-1-right.png' } },
-  { type: 'shelving', cost: 90, image: { left: 'https://i.postimg.cc/1XR2VXg2/shelving-1-left.png', right: 'https://i.postimg.cc/90xSd2ZM/shelving-1-right.png' } },
-  { type: 'tv', cost: 120, image: { left: 'https://i.postimg.cc/GmTNyZ2L/tv-left-1.png', right: 'https://i.postimg.cc/26rXgyxy/tv-right-1.png' } },
-  { type: 'closet', cost: 105, image: { left: 'https://i.postimg.cc/VkTwyqS6/Closet-1-left.png', right: 'https://i.postimg.cc/8zsGnKz9/Closet-1-right.png' } },
-  { type: 'couch', cost: 150, image: { left: 'https://i.postimg.cc/761rTjKG/couch-1-left.png', right: 'https://i.postimg.cc/GtcwPzfM/couch-1-right.png' } },
-  { type: 'books', cost: 15, image: { left: 'https://i.postimg.cc/wvDgQ1jB/Books-1-only-right.png', right: 'https://i.postimg.cc/wvDgQ1jB/Books-1-only-right.png' } },
-  { type: 'tv-stand', cost: 75, image: { left: 'https://i.postimg.cc/s2FL9wQp/tv-stand-1-left.png', right: 'https://i.postimg.cc/YS1sXYYT/tv-stand-1-right.png' } },
-  { type: 'wall-shelving', cost: 60, image: { left: 'https://i.postimg.cc/gjBSw-DbL/wall-shelving-1-left.png', right: 'https://i.postimg.cc/ryhYY8Ry/wall-shelving-1-right.png' } }
+  { type: "bed", cost: 75, image: { left: "/images/bed-1-left.png", right: "/images/bed-1-right.png" } },
+  { type: "chair", cost: 45, image: { left: "/images/Chair-1-left.png", right: "/images/Chair-1-right.png" } },
+  { type: "lamp", cost: 30, image: { left: "/images/Lamp.png", right: "/images/Lamp.png" } },
+  { type: "mirror", cost: 60, image: { left: "/images/Mirror-1-left.png", right: "/images/Mirror-1-right.png" } },
+  { type: "shelving", cost: 90, image: { left: "/images/shelving-1-left.png", right: "/images/shelving-1-right.png" } },
+  { type: "tv", cost: 120, image: { left: "/images/tv-left-1.png", right: "/images/tv-right-1.png" } },
+  { type: "closet", cost: 105, image: { left: "/images/Closet-1-left.png", right: "/images/Closet-1-right.png" } },
+  { type: "couch", cost: 150, image: { left: "/images/couch-1-left.png", right: "/images/couch-1-right.png" } },
+  {
+    type: "books",
+    cost: 15,
+    image: { left: "/images/Books-1-only-right.png", right: "/images/Books-1-only-right.png" },
+  },
+  { type: "tv-stand", cost: 75, image: { left: "/images/tv-stand-1-left.png", right: "/images/tv-stand-1-right.png" } },
+  {
+    type: "wall-shelving",
+    cost: 60,
+    image: { left: "/images/wall-shelving-1-left.png", right: "/images/wall-shelving-1-right.png" },
+  },
 ]
+
 
 export function ItemGrid() {
   const [selectedItems, setSelectedItems] = useState<string[]>([])
