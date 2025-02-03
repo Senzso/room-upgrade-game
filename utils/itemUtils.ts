@@ -9,46 +9,47 @@ export const initialItems: RoomItem[] = [
 
 export const itemUpgrades: Record<ItemType, { left: string[]; right: string[] }> = {
   bed: {
-    left: ["/bed-1-left.png", "/bed-2-left.png"],
-    right: ["/bed-1-right.png", "/bed-2-right.png"],
+    left: ["bed 1 left.png", "bed 2 left.png"],
+    right: ["bed 1 right.png", "bed 2 right.png"],
   },
   chair: {
-    left: ["/Chair-1-left.png", "/chair-2-left.png"],
-    right: ["/Chair-1-right.png", "/chair-2-right.png"],
+    left: ["Chair 1 left.png", "chair 2 left.png"],
+    right: ["Chair 1 right.png", "chair 2 right.png"],
   },
   desk: {
-    left: ["/Desk-1-left.png"],
-    right: ["/Desk-1-right.png"],
+    left: ["Desk 1 left.png"],
+    right: ["Desk 1 right.png"],
   },
   lamp: {
-    left: ["/Lamp.png"],
-    right: ["/Lamp.png"],
+    left: ["Lamp.png"],
+    right: ["Lamp.png"],
   },
   mirror: {
-    left: ["/Mirror-1-left.png", "/mirror-2-left.png"],
-    right: ["/Mirror-1-right.png", "/mirror-2-right.png"],
+    left: ["Mirror 1 left.png", "mirror 2 left.png"],
+    right: ["Mirror 1 right.png", "mirror 2 right.png"],
   },
   shelving: {
-    left: ["/shelving-1-left.png", "/shelving-2-left.png", "/shelving-3-left.png"],
-    right: ["/shelving-1-right.png", "/shelving-2-right.png", "/shelving-3-right.png"],
+    left: ["shelving 1 left.png", "shelving 2 left.png", "shelving 3 left.png"],
+    right: ["shelving 1 right.png", "shelving 2 right.png", "shelving 3 right.png"],
   },
   tv: {
-    left: ["/tv-left-1.png"],
-    right: ["/tv-right-1.png"],
+    left: ["tv left 1.png"],
+    right: ["tv right 1.png"],
   },
   closet: {
-    left: ["/Closet-1-left.png", "/closet-2-left.png"],
-    right: ["/Closet-1-right.png", "/closet-2-right.png"],
+    left: ["Closet 1 left.png", "closet 2 left.png"],
+    right: ["Closet 1 right.png", "closet 2 right.png"],
   },
   couch: {
-    left: ["/couch-1-left.png"],
-    right: ["/couch-1-right.png"],
+    left: ["couch 1 left.png"],
+    right: ["couch 1 right.png"],
   },
   books: {
-    left: ["/Books-1-only-right.png"],
-    right: ["/Books-1-only-right.png"],
+    left: ["Books 1 only right.png"],
+    right: ["Books 1 only right.png"],
   },
 }
+
 export function upgradeItem(items: RoomItem[], itemType: ItemType): RoomItem[] | null {
   const itemIndex = items.findIndex(item => item.type === itemType)
   if (itemIndex === -1) return null
