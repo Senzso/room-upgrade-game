@@ -7,24 +7,24 @@ import { textFont } from '@/lib/fonts'
 import { useState } from 'react'
 
 const availableItems = [
-  { type: "bed", cost: 75, image: { left: "/bed-1-left.png", right: "/bed-1-right.png" } },
-  { type: "chair", cost: 45, image: { left: "/Chair-1-left.png", right: "/Chair-1-right.png" } },
-  { type: "lamp", cost: 30, image: { left: "/Lamp.png", right: "/Lamp.png" } },
-  { type: "mirror", cost: 60, image: { left: "/Mirror-1-left.png", right: "/Mirror-1-right.png" } },
-  { type: "shelving", cost: 90, image: { left: "/shelving-1-left.png", right: "/shelving-1-right.png" } },
-  { type: "tv", cost: 120, image: { left: "/tv-left-1.png", right: "/tv-right-1.png" } },
-  { type: "closet", cost: 105, image: { left: "/Closet-1-left.png", right: "/Closet-1-right.png" } },
-  { type: "couch", cost: 150, image: { left: "/couch-1-left.png", right: "/couch-1-right.png" } },
+  { type: "bed", cost: 75, image: { left: "bed 1 left.png", right: "bed 1 right.png" } },
+  { type: "chair", cost: 45, image: { left: "Chair 1 left.png", right: "Chair 1 right.png" } },
+  { type: "lamp", cost: 30, image: { left: "Lamp.png", right: "Lamp.png" } },
+  { type: "mirror", cost: 60, image: { left: "Mirror 1 left.png", right: "Mirror 1 right.png" } },
+  { type: "shelving", cost: 90, image: { left: "shelving 1 left.png", right: "shelving 1 right.png" } },
+  { type: "tv", cost: 120, image: { left: "tv left 1.png", right: "tv right 1.png" } },
+  { type: "closet", cost: 105, image: { left: "Closet 1 left.png", right: "Closet 1 right.png" } },
+  { type: "couch", cost: 150, image: { left: "couch 1 left.png", right: "couch 1 right.png" } },
   {
     type: "books",
     cost: 15,
-    image: { left: "/Books-1-only-right.png", right: "/Books-1-only-right.png" },
+    image: { left: "Books 1 only right.png", right: "Books 1 only right.png" },
   },
-  { type: "tv-stand", cost: 75, image: { left: "/tv-stand-1-left.png", right: "/tv-stand-1-right.png" } },
+  { type: "tv-stand", cost: 75, image: { left: "tv-stand 1 left.png", right: "tv-stand 1 right.png" } },
   {
     type: "wall-shelving",
     cost: 60,
-    image: { left: "/wall-shelving-1-left.png", right: "/wall-shelving-1-right.png" },
+    image: { left: "wall-shelving 1 left.png", right: "wall-shelving 1 right.png" },
   },
 ]
 
