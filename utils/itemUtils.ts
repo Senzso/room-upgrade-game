@@ -9,44 +9,44 @@ export const initialItems: RoomItem[] = [
 
 export const itemUpgrades: Record<ItemType, { left: string[]; right: string[] }> = {
   bed: {
-    left: ["/images/bed-1-left.png", "/images/bed-2-left.png"],
-    right: ["/images/bed-1-right.png", "/images/bed-2-right.png"],
+    left: ["/bed-1-left.png", "/bed-2-left.png"],
+    right: ["/bed-1-right.png", "/bed-2-right.png"],
   },
   chair: {
-    left: ["/images/Chair-1-left.png", "/images/chair-2-left.png"],
-    right: ["/images/Chair-1-right.png", "/images/chair-2-right.png"],
+    left: ["/Chair-1-left.png", "/chair-2-left.png"],
+    right: ["/Chair-1-right.png", "/chair-2-right.png"],
   },
   desk: {
-    left: ["/images/Desk-1-left.png"],
-    right: ["/images/Desk-1-right.png"],
+    left: ["/Desk-1-left.png"],
+    right: ["/Desk-1-right.png"],
   },
   lamp: {
-    left: ["/images/Lamp.png"],
-    right: ["/images/Lamp.png"],
+    left: ["/Lamp.png"],
+    right: ["/Lamp.png"],
   },
   mirror: {
-    left: ["/images/Mirror-1-left.png", "/images/mirror-2-left.png"],
-    right: ["/images/Mirror-1-right.png", "/images/mirror-2-right.png"],
+    left: ["/Mirror-1-left.png", "/mirror-2-left.png"],
+    right: ["/Mirror-1-right.png", "/mirror-2-right.png"],
   },
   shelving: {
-    left: ["/images/shelving-1-left.png", "/images/shelving-2-left.png", "/images/shelving-3-left.png"],
-    right: ["/images/shelving-1-right.png", "/images/shelving-2-right.png", "/images/shelving-3-right.png"],
+    left: ["/shelving-1-left.png", "/shelving-2-left.png", "/shelving-3-left.png"],
+    right: ["/shelving-1-right.png", "/shelving-2-right.png", "/shelving-3-right.png"],
   },
   tv: {
-    left: ["/images/tv-left-1.png"],
-    right: ["/images/tv-right-1.png"],
+    left: ["/tv-left-1.png"],
+    right: ["/tv-right-1.png"],
   },
   closet: {
-    left: ["/images/Closet-1-left.png", "/images/closet-2-left.png"],
-    right: ["/images/Closet-1-right.png", "/images/closet-2-right.png"],
+    left: ["/Closet-1-left.png", "/closet-2-left.png"],
+    right: ["/Closet-1-right.png", "/closet-2-right.png"],
   },
   couch: {
-    left: ["/images/couch-1-left.png"],
-    right: ["/images/couch-1-right.png"],
+    left: ["/couch-1-left.png"],
+    right: ["/couch-1-right.png"],
   },
   books: {
-    left: ["/images/Books-1-only-right.png"],
-    right: ["/images/Books-1-only-right.png"],
+    left: ["/Books-1-only-right.png"],
+    right: ["/Books-1-only-right.png"],
   },
 }
 export function upgradeItem(items: RoomItem[], itemType: ItemType): RoomItem[] | null {
