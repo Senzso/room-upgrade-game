@@ -1,9 +1,9 @@
 import { ItemType, RoomItem } from '../types'
 
 export const initialItems: RoomItem[] = [
-  { type: 'bed', image: 'https://i.postimg.cc/P5FXXG7d/bed-1-left.png', level: 1, position: { x: 50, y: 300 } },
-  { type: 'chair', image: 'https://i.postimg.cc/FzZvwwc5/Chair-1-left.png', level: 1, position: { x: 200, y: 400 } },
-  { type: 'desk', image: 'https://i.postimg.cc/KjJX0BSm/Desk-1-left.png', level: 1, position: { x: 300, y: 400 } },
+  { type: 'bed', image: '/bed-1-left.png', level: 1, position: { x: 50, y: 300 } },
+  { type: 'chair', image: '/Chair-1-left.png', level: 1, position: { x: 200, y: 400 } },
+  { type: 'desk', image: '/Desk-1-left.png', level: 1, position: { x: 300, y: 400 } },
   // Add more initial items here
 ]
 
