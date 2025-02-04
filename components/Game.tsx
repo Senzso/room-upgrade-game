@@ -26,10 +26,10 @@ export function Game() {
       return null
     }
 
-    return (
+       return (
       <div className="min-h-screen bg-gradient-to-br from-purple-900 to-blue-900 p-4">
         <div className="max-w-[1600px] mx-auto">
-           <h1 className={`${titleFont.className} text-4xl text-yellow-400 mb-8`}>
+          <h1 className={`${titleFont.className} text-4xl text-yellow-400 mb-8`}>
             <img src="/logo.png" alt="Solana Trading Simulator Logo" className="inline mr-2" />
             Solana Trading Simulator
           </h1>
