@@ -29,15 +29,14 @@ export default function UserSetup() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 to-blue-900">
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 to-blue-900">
       <Card className="w-[400px] bg-[#1a1625]/90 border-none">
         <CardHeader className="text-center space-y-2">
           <CardTitle className={`${titleFont.className} text-4xl text-yellow-400`}>
-            Welcome to SOLife
+            Welcome to
+            <img src="/logo.png" alt="Solana Trading Simulator Logo" className="mx-auto mt-2" />
           </CardTitle>
-          <p className={`${textFont.className} text-lg text-gray-300`}>
-            Solana Trading Life Simulator
-          </p>
+          <p className={`${textFont.className} text-lg text-gray-300`}>Solana Trading Simulator</p>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
