@@ -7,23 +7,23 @@ import { textFont } from '@/lib/fonts'
 import { useState } from 'react'
 
 const availableItems = [
-  { type: "bed", cost: 75, image: { left: "bed 1 left.png", right: "bed 1 right.png" } },
-  { type: "chair", cost: 45, image: { left: "Chair 1 left.png", right: "Chair 1 right.png" } },
-  { type: "lamp", cost: 30, image: { left: "Lamp.png", right: "Lamp.png" } },
-  { type: "mirror", cost: 60, image: { left: "Mirror 1 left.png", right: "Mirror 1 right.png" } },
-  { type: "shelving", cost: 90, image: { left: "shelving 1 left.png", right: "shelving 1 right.png" } },
-  { type: "tv", cost: 120, image: { left: "tv left 1.png", right: "tv right 1.png" } },
-  { type: "closet", cost: 105, image: { left: "Closet 1 left.png", right: "Closet 1 right.png" } },
-  { type: "couch", cost: 150, image: { left: "couch 1 left.png", right: "couch 1 right.png" } },
+  { type: "bed", cost: 1000, image: { left: "bed 1 left.png", right: "bed 1 right.png" } },
+  { type: "chair", cost: 500, image: { left: "Chair 1 left.png", right: "Chair 1 right.png" } },
+  { type: "lamp", cost: 500, image: { left: "Lamp.png", right: "Lamp.png" } },
+  { type: "mirror", cost: 2000, image: { left: "Mirror 1 left.png", right: "Mirror 1 right.png" } },
+  { type: "shelving", cost: 750, image: { left: "shelving 1 left.png", right: "shelving 1 right.png" } },
+  { type: "tv", cost: 2500, image: { left: "tv left 1.png", right: "tv right 1.png" } },
+  { type: "closet", cost: 1500, image: { left: "Closet 1 left.png", right: "Closet 1 right.png" } },
+  { type: "couch", cost: 3500, image: { left: "couch 1 left.png", right: "couch 1 right.png" } },
   {
     type: "books",
-    cost: 15,
+    cost: 250,
     image: { left: "Books 1 only right.png", right: "Books 1 only right.png" },
   },
-  { type: "tv-stand", cost: 75, image: { left: "tv-stand 1 left.png", right: "tv-stand 1 right.png" } },
+  { type: "tv-stand", cost: 750, image: { left: "tv-stand 1 left.png", right: "tv-stand 1 right.png" } },
   {
     type: "wall-shelving",
-    cost: 60,
+    cost: 750,
     image: { left: "wall-shelving 1 left.png", right: "wall-shelving 1 right.png" },
   },
 ]
@@ -53,7 +53,7 @@ export function ItemGrid() {
         addItem({
           type: item.type,
           image: item.type === 'books' 
-            ? 'https://i.postimg.cc/KYMZmVqj/Books-1-left.png'
+            ? '/Books 1 left.png'
             : item.image.left,
           level: 1,
           position: { x: 0, y: 0 },
