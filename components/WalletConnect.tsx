@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { connectWallet } from '@/lib/wallet'
-import { useGameStore } from '@/lib/store'
-import { titleFont, textFont } from '@/lib/fonts'
+import { connectWallet } from "@/lib/wallet"
+import { useGameStore } from "@/lib/store"
+import { titleFont, textFont } from "@/lib/fonts"
 
 export default function WalletConnect() {
   const router = useRouter()
@@ -15,7 +15,7 @@ export default function WalletConnect() {
 
   useEffect(() => {
     if (address) {
-      router.push('/setup')
+      router.push("/setup")
     }
   }, [address, router])
 
@@ -23,7 +23,7 @@ export default function WalletConnect() {
     const address = await connectWallet()
     if (address) {
       setWallet(address)
-      router.push('/setup')
+      router.push("/setup")
     }
   }
 
@@ -32,14 +32,13 @@ export default function WalletConnect() {
       <Card className="w-[400px] bg-[#1a1625]/90 border-none">
         <CardHeader className="text-center space-y-2">
           <CardTitle className={`${titleFont.className} text-4xl text-yellow-400`}>
-            Welcome to SOLife
+            Welcome to
+            <img src="/logo.png" alt="Solana Trading Simulator Logo" className="mx-auto mt-2" />
           </CardTitle>
-          <p className={`${textFont.className} text-lg text-gray-300`}>
-            Solana Trading Life Simulator
-          </p>
+          <p className={`${textFont.className} text-lg text-gray-300`}>Solana Trading Simulator</p>
         </CardHeader>
         <CardContent>
-          <Button 
+          <Button
             onClick={handleConnect}
             className={`
               w-full bg-yellow-400 hover:bg-yellow-500 text-black 
