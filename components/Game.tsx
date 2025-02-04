@@ -33,7 +33,7 @@ export function Game() {
             <img
               src="/logo.png"
               alt="Solana Trading Simulator Logo"
-              className="h-8 w-auto mr-3" // Adjust the height as needed
+              className="h-10 w-auto mr-3" // Adjust the height as needed
             />
             Solana Trading Simulator
           </h1>
